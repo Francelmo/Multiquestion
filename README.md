@@ -4,7 +4,7 @@
 
 ### Multiquestion
     
-    Site para reolução de exercícios.
+    Site para resolução de exercícios.
 
 ##### Características/Recursos:
 
