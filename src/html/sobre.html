@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <title>Sobre</title>
+</head>
+<body>
+    <!-- START Barra de Navegação -->
+    <nav class="navbar sticky-top navbar-expand-lg bg-primary py-3">
+        <div class="container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-journal-text" viewBox="0 0 16 16">
+                <path d="M5 10.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/>
+                <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
+                <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/>
+            </svg>
+            <a class="navbar-brand ps-2" href="inicio.html">Multiquestion</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="inicio.html">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="sobre.html">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-dark" onclick="redirectToLogin()">
+                            Entrar
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- END Barra de Navegação -->
+
+    <!-- START Corpo -->
+    <div class="container p-5">
+        <div class="card ms-3 my-5 shadow-lg" style="max-width: 1000px;">
+            <div class="row">
+                <div class="col-md-6 pt-5">
+                    <img src="../img/sobre.jpg" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-6">
+                    <div class="card-body">
+                        <h5 class="card-title">Nossa Missão</h5>
+                        <p class="card-text blockquote">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, modi. Repudiandae, quod ipsam sunt optio excepturi hic quibusdam impedit provident atque necessitatibus repellat id quo quia at corporis. Esse, fugit! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione optio modi excepturi. Magni facere quidem, a obcaecati autem excepturi ex laboriosam esse, nemo ut voluptates molestiae hic cupiditate iure nihil! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio voluptatem assumenda labore at incidunt asperiores reprehenderit ratione quod, adipisci, fugit suscipit fugiat recusandae laudantium odit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END Corpo -->
+
+    <!-- START Rodapé -->
+    <footer class="py-3 bg-dark text-light text-center">
+        2023 © Multiquestion
+    </footer>
+    <!-- END Rodapé -->
+
+    <script>
+        // Redirecionar para a página de login
+        function redirectToLogin() {
+            window.location.href = "login.html";
+        }
+    </script>
+    
+    <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
