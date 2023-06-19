@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" rel="icon" href="../img/icon.ico">
+    <title>Turma Virtual</title>
+</head>
+<body>
+    <!-- START Barra de Navegação -->
+    <nav class="navbar fixed-top navbar-expand-lg bg-primary py-2 pb-3">
+        <div class="container">
+            <svg class="ms-4" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="black" class="bi bi-journal-text" viewBox="0 0 16 16">
+                <path d="M5 10.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/>
+                <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
+                <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/>
+            </svg>
+            <a class="navbar-brand ps-2"><strong>Multiquestion</strong></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse offset-9" id="navbarNav">
+                <div class="dropdown">
+                    <button class="btn btn-dark btn-outline-light rounded-circle dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        <strong>B</strong>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li>
+                            <a class="dropdown-item" href="https://caus.ufrn.br/home/usuario/recuperar-senha">
+                                <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-key-fill" viewBox="0 0 16 16">
+                                    <path d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2zM2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                                </svg>
+                                <strong>Alterar Senha</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                                    <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+                                </svg>
+                                <strong>Alterar Contato</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="suporte.html">
+                                <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-left-text-fill" viewBox="0 0 16 16">
+                                    <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z"/>
+                                </svg>
+                                <strong>Suporte</strong>
+                            </a>
+                        </li>
+                        <hr>
+                        <li>
+                            <a class="dropdown-item" href="inicio.html"> 
+                                <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z"/>
+                                    <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+                                </svg>
+                                <strong>Sair</strong>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid sticky-top py-1 pt-5 shadow" style="background-color: white;">
+        <div class="container me-3 pt-3">
+            <ul class="nav nav-underline">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="disciplinas.html">Disciplinas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="relatorios.html">Relatórios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="criarExercicio.html">Elaborar Exercício</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- END Barra de Navegação -->
+
+    <!-- START Corpo -->
+    <div class="container row pt-5">
+        <div class="container col-6">
+            <h3>Exercícios:</h3>
+        </div>
+        <div class="col-10 offset-3">
+            <div class="card border-info mb-3 w-80 shadow" style="width: 50rem;">
+                <div class="card-header"><h4>2023.1 - PDSE T01 - Exercício 1 - Design Instrucional</h4></div>
+                <div class="row">
+                    <div class="card-body text-secondary col-5 ms-3">
+                        <h5 class="card-title pb-4">Prof.: ISABEL DILLMANN NUNES</h5>
+                        <p class="card-text">Início: 06 de junho de 2023, às 20:35</p>
+                        <p class="card-text">Término: 08 de junho de 2023, às 20:35</p>
+                        <button type="button" class="btn btn-primary">Liberar</button>
+                        <button type="button" class="btn btn-success">Editar</button>
+                        <button type="button" class="btn btn-danger">Excluir</button>
+                    </div>
+                    <div class="card-body text-secondary text-center col-5 ps-5 pt-5 offset-1">
+                        <h6>Nota:</h6>
+                        <p> - </p>
+                        <p>de 10,00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-10 offset-3 pt-3">
+            <div class="card border-info mb-3 w-80 shadow" style="width: 50rem;">
+                <div class="card-header"><h4>2023.1 - PDSE T01 - Exercício 2 - Engenharia de Requisitos</h4></div>
+                <div class="row">
+                    <div class="card-body text-secondary col-5 ms-3">
+                        <h5 class="card-title pb-4">Prof.: ISABEL DILLMANN NUNES</h5>
+                        <p class="card-text">Início: 06 de junho de 2023, às 20:35</p>
+                        <p class="card-text">Término: 15 de junho de 2023, às 20:35</p>
+                        <button type="button" class="btn btn-primary">Liberar</button>
+                        <button type="button" class="btn btn-success">Editar</button>
+                        <button type="button" class="btn btn-danger">Excluir</button>
+                    </div>
+                    <div class="card-body text-secondary text-center col-5 ps-5 pt-5 offset-1">
+                        <h6>Nota:</h6>
+                        <p> - </p>
+                        <p>de 10,00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-10 offset-3 pt-3">
+            <div class="card border-info mb-3 w-80 shadow" style="width: 50rem;">
+                <div class="card-header"><h4>2023.1 - PDSE T01 - Exercício 3 - Diagrama de Casos de Uso</h4></div>
+                <div class="row">
+                    <div class="card-body text-secondary col-5 ms-3">
+                        <h5 class="card-title pb-4">Prof.: ISABEL DILLMANN NUNES</h5>
+                        <p class="card-text">Início: 06 de junho de 2023, às 20:35</p>
+                        <p class="card-text">Término: 22 de junho de 2023, às 20:35</p>
+                        <button type="button" class="btn btn-primary">Liberar</button>
+                        <button type="button" class="btn btn-success">Editar</button>
+                        <button type="button" class="btn btn-danger">Excluir</button>
+                    </div>
+                    <div class="card-body text-secondary text-center col-5 ps-5 pt-5 offset-1">
+                        <h6>Nota:</h6>
+                        <p> - </p>
+                        <p>de 10,00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-10 offset-3 pt-3">
+            <div class="card border-info mb-3 w-80 shadow" style="width: 50rem;">
+                <div class="card-header"><h4>2023.1 - PDSE T01 - Exercício 4 -  Projeto (interface homem máquina)</h4></div>
+                <div class="row">
+                    <div class="card-body text-secondary col-5 ms-3">
+                        <h5 class="card-title pb-4">Prof.: ISABEL DILLMANN NUNES</h5>
+                        <p class="card-text">Início: 06 de junho de 2023, às 20:35</p>
+                        <p class="card-text">Término: 29 de junho de 2023, às 20:35</p>
+                        <button type="button" class="btn btn-primary">Liberar</button>
+                        <button type="button" class="btn btn-success">Editar</button>
+                        <button type="button" class="btn btn-danger">Excluir</button>
+                    </div>
+                    <div class="card-body text-secondary text-center col-5 ps-5 pt-5 offset-1">
+                        <h6>Nota:</h6>
+                        <p> - </p>
+                        <p>de 10,00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END Corpo -->
+
+    <style>
+        body {
+            background-color: #F5F5F5;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .dropdown-toggle::after {
+          display: none;
+        }
+    </style>
+    
+    <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

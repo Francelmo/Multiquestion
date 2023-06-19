@@ -8,7 +8,7 @@
 
 ##### Características/Recursos:
 
-- Permite a execução ou elaboração de exercícios a partir de um banco de questões feito previamente por outros professores das disciplinas presentas. O aluno poderá acessar suas turmas e em seguida responder aos exercícios presentes passados pelos professores assim como elaborar simulados a partir do banco para resolver questões dos mais diversos assuntos disponibilizados para as disciplinas.
+- Permite a execução ou elaboração de exercícios a partir de um banco de questões feito previamente por outros professores das disciplinas. O aluno poderá acessar suas turmas e em seguida responder aos exercícios presentes passados pelos professores assim como elaborar simulados a partir do banco para resolver questões dos mais diversos assuntos disponibilizados para as disciplinas.
 
 ##### Site desenvolvido utilizando as tecnologias:
 
