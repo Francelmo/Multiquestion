@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" rel="icon" href="../img/icon.ico">
+    <title>Banco de Questões</title>
+</head>
+<body>
+    <!-- Acessibilidade -->
+    <div class="container-fluid fixed-top" id="acessibilidade">
+        <section class="offset-1">
+            <!-- Aumentar Fonte -->
+            <button class="btn btn-outline-light btn-floating m-1" id="aumentarFonte" title="Aumentar fonte">
+                <i class="fa-solid fa-plus fa-2xs"></i>
+                <i class="fa-solid fa-font"></i>
+            </button>
+
+            <!-- Fonte Padão -->
+            <button class="btn btn-outline-light btn-floating m-1" id="padronizarFonte" title="Padronizar fonte">
+                <i class="fa-solid fa-font"></i>
+            </button>
+
+            <!-- Diminuir Fonte -->
+            <button class="btn btn-outline-light btn-floating m-1" id="diminuirFonte" title="Diminuir fonte">
+                <i class="fa-solid fa-font"></i>
+                <i class="fa-solid fa-minus fa-2xs"></i>
+            </button>
+
+            <!-- Contraste -->
+            <button class="btn btn-outline-light btn-floating m-1 mx-3" id="altoContraste" title="Alto contraste">
+                <i class="fa-solid fa-circle-half-stroke"></i>
+            </button>
+        </section>
+    </div>
+    <!-- START Corpo -->
+    <div class="container pt-5">
+        <div class="row">
+            <div class="col-3">
+                <button class="btn btn-primary py-3 ms-4 my-5" type="submit">CRIAR EXERCÍCIO</button>
+            </div>
+            <div class="col-2 offset-7">
+                <button class="btn btn-secondary py-3 my-5" type="submit">NOVA QUESTÃO</button>
+            </div>
+        </div>
+        <form class="d-flex" role="search">
+            <input class="form-control me-2 py-3" type="search" placeholder="Buscar por texto" aria-label="Search">
+            <button class="btn btn-outline-primary" type="submit">Buscar</button>
+        </form>
+        <div class="row pt-5">
+            <div class="col-4">
+                <div class="card" style="width: 23rem;">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <h5 class="card-title">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-justify-left" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+                                    </svg>
+                                    <p class="text-danger">Difícil</p>
+                                </h5>
+                            </div>
+                            <div class="col-6">
+                                <button class="btn btn-outline" style="margin-left: 80%;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-three-dots-vertical" data-bs-toggle="modal" data-bs-target="#exampleModal1" viewBox="0 0 16 16">
+                                        <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <img src="../img/qdif.png" class="card-img-top" alt="..." data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card" style="width: 23rem;">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <h5 class="card-title">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+                                        <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"/>
+                                        <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
+                                    </svg>
+                                    <p class="text-warning">Médio</p>
+                                </h5>
+                            </div>
+                            <div class="col-6">
+                                <button class="btn btn-outline" style="margin-left: 80%;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-three-dots-vertical" data-bs-toggle="modal" data-bs-target="#exampleModal2" viewBox="0 0 16 16">
+                                        <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <img src="../img/qmed.png" class="card-img-top" alt="..." data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card" style="width: 23rem;">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <h5 class="card-title"> 
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-toggles" viewBox="0 0 16 16">
+                                        <path d="M4.5 9a3.5 3.5 0 1 0 0 7h7a3.5 3.5 0 1 0 0-7h-7zm7 6a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zm-7-14a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zm2.45 0A3.49 3.49 0 0 1 8 3.5 3.49 3.49 0 0 1 6.95 6h4.55a2.5 2.5 0 0 0 0-5H6.95zM4.5 0h7a3.5 3.5 0 1 1 0 7h-7a3.5 3.5 0 1 1 0-7z"/>
+                                    </svg>
+                                    <p class="text-success">Fácil</p>
+                                </h5>
+                            </div>
+                            <div class="col-6">
+                                <button class="btn btn-outline" style="margin-left: 80%;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-three-dots-vertical" data-bs-toggle="modal" data-bs-target="#exampleModal3" viewBox="0 0 16 16">
+                                        <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <img src="../img/qfac.png" class="card-img-top" alt="..." data-bs-toggle="modal" data-bs-target="#exampleModal3">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Exercício</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="../img/qdif.png" class="img-fluid" alt="...">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">Selecionar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Exercício</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="../img/qmed.png" class="img-fluid" alt="...">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">Selecionar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Exercício</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="../img/qfac.png" class="img-fluid" alt="...">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">Selecionar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- VLibras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <!-- END Corpo -->
+
+    <style>
+        #redefinirSenha {
+            text-decoration: none
+        }
+
+        body {
+            font-size: 18px;
+            background-color: #F5F5F5;
+        }
+
+        body p {
+	        font-size: inherit !important;
+        }
+
+        #acessibilidade {
+            background-color: rgb(61, 139, 253);
+        }
+    </style>
+
+    <script>
+        // Acessibilidade
+        window.onload = function() {
+            var elementBody = document.querySelector('body');
+            var elementBtnIncreaseFont = document.getElementById('aumentarFonte');
+            var elementBtnFont = document.getElementById('padronizarFonte');
+            var elementBtnDecreaseFont = document.getElementById('diminuirFonte');
+            var btnContraste = document.getElementById('altoContraste');
+            // Padrão de tamanho, equivale a 100% do valor definido no Body
+            var fontSize = 100;
+            // Valor de incremento ou decremento, equivale a 10% do valor do Body
+            var increaseDecrease = 10;
+
+            // Evento de click para aumentar a fonte
+            elementBtnIncreaseFont.addEventListener('click', function(event) {
+                fontSize = fontSize + increaseDecrease + 10;
+                elementBody.style.fontSize = fontSize + '%';
+            });
+
+            // Evento de click para padronizar a fonte
+            elementBtnFont.addEventListener('click', function (event) {
+                elementBody.style.fontSize = '113%';
+                fontSize = 100;
+                increaseDecrease = 10;
+            });
+
+            // Evento de click para diminuir a fonte
+            elementBtnDecreaseFont.addEventListener('click', function(event) {
+                fontSize = fontSize - increaseDecrease;
+                elementBody.style.fontSize = fontSize + '%';
+            });
+
+            // Evento de click para ajustar o contraste
+            btnContraste.addEventListener('click', function(event) {
+                if (elementBody.style.background === 'black' && elementBody.style.color === 'white') {
+                    // Se o contraste já estiver aplicado, reverter para o estado normal
+                    elementBody.style.background = ''; // Limpa o estilo, voltando ao valor padrão
+                    elementBody.style.color = '';
+                } else {
+                    // Aplicar o contraste
+                    elementBody.style.background = 'black';
+                    elementBody.style.color = 'white';
+                }
+            });
+        }
+    </script>
+
+    <!-- VLibras -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

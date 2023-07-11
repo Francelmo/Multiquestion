@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" rel="icon" href="../img/icon.ico">
+    <title>Exercício</title>
+
+    <style>
+        .hidden-section {
+          display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Acessibilidade -->
+    <div class="container-fluid sticky-top" id="acessibilidade">
+        <section class="offset-1">
+            <!-- Aumentar Fonte -->
+            <button class="btn btn-outline-light btn-floating m-1" id="aumentarFonte" title="Aumentar fonte">
+                <i class="fa-solid fa-plus fa-2xs"></i>
+                <i class="fa-solid fa-font"></i>
+            </button>
+
+            <!-- Fonte Padão -->
+            <button class="btn btn-outline-light btn-floating m-1" id="padronizarFonte" title="Padronizar fonte">
+                <i class="fa-solid fa-font"></i>
+            </button>
+
+            <!-- Diminuir Fonte -->
+            <button class="btn btn-outline-light btn-floating m-1" id="diminuirFonte" title="Diminuir fonte">
+                <i class="fa-solid fa-font"></i>
+                <i class="fa-solid fa-minus fa-2xs"></i>
+            </button>
+
+            <!-- Contraste -->
+            <button class="btn btn-outline-light btn-floating m-1 mx-3" id="altoContraste" title="Alto contraste">
+                <i class="fa-solid fa-circle-half-stroke"></i>
+            </button>
+        </section>
+    </div>
+    <!-- START Corpo -->
+    <div style="width: 1339px;">
+        <div class="row">
+            <div class="col-2 offset-2">
+                <button type="button" class="btn btn-danger ms-0 px-4 py-2 mt-3" onclick="sair()">SAIR</button>
+            </div>
+            <div class="col-5 pt-4">
+                <h5>2023.1 - PDSE T01 - Exercício 1 - Design Instrucional</h5>
+            </div>
+            <div class="col-3">
+                <button type="button" class="btn btn-primary me-0 px-3 py-2 mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">ENVIAR</button>
+            </div>
+        </div>
+        <hr>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Atenção!</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Deseja realmente enviar atividade?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" onclick="enviar()">Enviar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Conteúdo das páginas -->
+            <div id="section1" class="section">
+                <h4>Questão 1</h4>
+                <hr>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi vel rerum explicabo assumenda sit officiis quam eius expedita tempore consectetur, qui consequuntur fugit accusantium dolor quas. Debitis non velit magni. Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit assumenda vitae provident magnam fuga optio non eaque similique. Illo odio ipsum facere magni ad odit dolores eius soluta aspernatur earum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quibusdam cumque temporibus repellendus dicta adipisci inventore magni eum asperiores porro numquam, eaque optio sequi recusandae, ducimus rerum quos modi vero?</p>
+                <div class="mb-3 pt-5">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                </div>                  
+            </div>
+            
+            <div id="section2" class="section hidden-section">
+                <h4>Questão 2</h4>
+                <hr>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At fugit dolore doloremque nemo quae nam voluptate eveniet odit, quibusdam tenetur amet dolorum enim quisquam consequatur laborum. Molestiae fugiat cum totam!. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis unde qui provident amet nulla ratione aliquid, neque nisi sed consequatur ex iste, porro officia placeat officiis ipsam magnam esse labore.</p>
+                <div class="input-group flex-nowrap col-auto">
+                    <select class="form-select form-select-lg" aria-label=".form-select-lg example">
+                        <option selected></option>
+                        <option value="1">V</option>
+                        <option value="2">F</option>
+                    </select>
+                    <span class="input-group-text" id="basic-addon1">tetur adipisicing elit. At fugit dolore doloremque nemo quae nam voluptaodit, quration dolorum enin quisquam consaliquid, laborum. conseq exi</span>
+                </div>
+                <br>
+                <div class="input-group flex-nowrap col-auto">
+                    <select class="form-select form-select-lg" aria-label=".form-select-lg example">
+                        <option selected></option>
+                        <option value="1">V</option>
+                        <option value="2">F</option>
+                    </select>
+                    <span class="input-group-text" id="basic-addon1">lore doloremque nemo quae nam voluptate eveniet odit, quibusdam tenetur amet dolorum enim quisquam consequatur laborum. Molestiae Mol</span>
+                </div>
+                <br>
+                <div class="input-group flex-nowrap col-auto">
+                    <select class="form-select form-select-lg" aria-label=".form-select-lg example">
+                        <option selected></option>
+                        <option value="1">V</option>
+                        <option value="2">F</option>
+                    </select>
+                    <span class="input-group-text" id="basic-addon1">consectetur adipisicing elit. Deserunt eos veniam maiores quae quidem rem tenetur ipsam, eveniet ipsa, nobis praesentium illo temporan exceptx</span>            
+                </div>
+                <br>
+                <div class="input-group flex-nowrap col-auto">
+                    <select class="form-select form-select-lg" aria-label=".form-select-lg example">
+                        <option selected></option>
+                        <option value="1">V</option>
+                        <option value="2">F</option>
+                    </select>
+                    <span class="input-group-text" id="basic-addon1">psum dolor sit amet consectetur adipisicing elit. Deseruntb ing elit. que nemo quae nam voluptate e At fugit dolore doloremque nemo quam qui</span>
+                </div>
+            </div>
+            
+            <div id="section3" class="section hidden-section pb-5">
+                <h4>Questão 3</h4>
+                <hr>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt eos veniam maiores quae quidem rem tenetur ipsam, eveniet ipsa, nobis praesentium illo tempora excepturi corrupti. Quasi architecto placeat quis veniam!.</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        <p>A) met consectetur adipisicing elit. Dese</p>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                    <label class="form-check-label" for="flexCheckChecked">
+                        <p>B) it. Deserunt eos veniam maiores quae q</p>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                    <label class="form-check-label" for="flexCheckChecked">
+                        <p>C) ipsam, eveniet ipsa, nobis praesentium illo tempora excepturi corrupti. Quasi architecto placeat</p>
+                    </label>
+                </div>
+                <div class="form-check pb-3">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                    <label class="form-check-label" for="flexCheckChecked">
+                        <p>D) Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt eos veniam mai</p>
+                    </label>
+                </div>
+            </div>
+            
+            <div id="section4" class="section hidden-section pb-5">
+                <h4>Questão 4</h4>
+                <hr>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        <p>A) ipsum dolor sit amet consectetur adipisicing elit. Deserunt</p>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        <p>B) eveniet ipsa, nobis praesentium illo tempora excepturi corrupti.</p>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        <p>C) it. Deserunt eos veniam maiores</p>
+                    </label>
+                </div>
+                <div class="form-check pb-5">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        <p>D) ipsum dolor sit amet consectetur adipisicing elit. Deserunt eos</p>
+                    </label>
+                </div>                
+            </div>
+
+            <div id="section5" class="section hidden-section pb-5">
+                <h4>Questão 5</h4>
+                <hr>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint nihil eveniet perferendis! Nobis assumenda a, possimus quaerat officia doloremque itaque molestias voluptatem sit fugiat, cumque quis, iste ut nam est!</p>
+                <div class="mb-3 pt-5">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                </div> 
+            </div>
+        </div>
+
+        <div class="row pt-5">
+            <hr>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <button class="page-item btn btn-sm">
+                        <a id="prevButton" class="page-link" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </button>
+                    <li class="page-item pt-1"><a class="page-link" href="#section1">1</a></li>
+                    <li class="page-item pt-1"><a class="page-link" href="#section2">2</a></li>
+                    <li class="page-item pt-1"><a class="page-link" href="#section3">3</a></li>
+                    <li class="page-item pt-1"><a class="page-link" href="#section4">4</a></li>
+                    <li class="page-item pt-1"><a class="page-link" href="#section5">5</a></li>
+                    <button class="page-item btn btn-sm">
+                        <a id="nextButton" class="page-link" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </button>
+                </ul>
+            </nav>
+        </div>  
+    </div>
+    <!-- END Corpo -->
+
+    <style>
+        body {
+            font-size: 18px;
+            background-color: #F5F5F5;
+        }
+
+        body p {
+	        font-size: inherit !important;
+        }
+
+        #acessibilidade {
+            background-color: rgb(200, 200, 200);
+        }
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var sections = document.getElementsByClassName("section");
+            var pageLinks = document.querySelectorAll(".pagination a");
+            var prevButton = document.getElementById("prevButton");
+            var nextButton = document.getElementById("nextButton");
+            var currentIndex = 0;
+
+            // Função para exibir a seção correspondente ao índice atual
+            function showCurrentSection() {
+                for (var i = 0; i < sections.length; i++) {
+                    var section = sections[i];
+                    if (i === currentIndex) {
+                    section.classList.remove("hidden-section");
+                    } else {
+                    section.classList.add("hidden-section");
+                    }
+                }
+            }
+
+            // Função para atualizar o estado dos botões de navegação
+            function updateNavigationButtons() {
+                if (currentIndex === 0) {
+                    prevButton.disabled = true;
+                } else {
+                    prevButton.disabled = false;
+                }
+
+                if (currentIndex === sections.length - 1) {
+                    nextButton.disabled = true;
+                } else {
+                    nextButton.disabled = false;
+                }
+            }
+
+            // Manipulador de clique do botão "Anterior"
+            prevButton.addEventListener("click", function() {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    showCurrentSection();
+                    updateNavigationButtons();
+                }
+            });
+
+            // Manipulador de clique do botão "Próximo"
+            nextButton.addEventListener("click", function() {
+                if (currentIndex < sections.length - 1) {
+                    currentIndex++;
+                    showCurrentSection();
+                    updateNavigationButtons();
+                }
+            });
+
+            // Manipulador de clique dos links de paginação
+            for (var i = 0; i < pageLinks.length; i++) {
+                var link = pageLinks[i];
+                link.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    var targetSectionId = this.getAttribute("href").substr(1);
+                    currentIndex = Array.from(sections).findIndex(function(section) {
+                    return section.id === targetSectionId;
+                    });
+                    showCurrentSection();
+                    updateNavigationButtons();
+                });
+            }
+
+            // Exibir a seção inicial
+            showCurrentSection();
+            updateNavigationButtons();
+        });
+
+        function sair() {
+            window.location.href = "listaTarefas.html";
+        }
+
+        function enviar() {
+            window.location.href = "listaTarefas.html";
+        }
+
+        // Acessibilidade
+        window.onload = function() {
+            var elementBody = document.querySelector('body');
+            var elementBtnIncreaseFont = document.getElementById('aumentarFonte');
+            var elementBtnFont = document.getElementById('padronizarFonte');
+            var elementBtnDecreaseFont = document.getElementById('diminuirFonte');
+            var btnContraste = document.getElementById('altoContraste');
+            // Padrão de tamanho, equivale a 100% do valor definido no Body
+            var fontSize = 100;
+            // Valor de incremento ou decremento, equivale a 10% do valor do Body
+            var increaseDecrease = 10;
+
+            // Evento de click para aumentar a fonte
+            elementBtnIncreaseFont.addEventListener('click', function(event) {
+                fontSize = fontSize + increaseDecrease + 10;
+                elementBody.style.fontSize = fontSize + '%';
+            });
+
+            // Evento de click para padronizar a fonte
+            elementBtnFont.addEventListener('click', function (event) {
+                elementBody.style.fontSize = '113%';
+                fontSize = 100;
+                increaseDecrease = 10;
+            });
+
+            // Evento de click para diminuir a fonte
+            elementBtnDecreaseFont.addEventListener('click', function(event) {
+                fontSize = fontSize - increaseDecrease;
+                elementBody.style.fontSize = fontSize + '%';
+            });
+
+            // Evento de click para ajustar o contraste
+            btnContraste.addEventListener('click', function(event) {
+                if (elementBody.style.background === 'black' && elementBody.style.color === 'white') {
+                    // Se o contraste já estiver aplicado, reverter para o estado normal
+                    elementBody.style.background = ''; // Limpa o estilo, voltando ao valor padrão
+                    elementBody.style.color = '';
+                } else {
+                    // Aplicar o contraste
+                    elementBody.style.background = 'black';
+                    elementBody.style.color = 'white';
+                }
+            });
+        }
+    </script>
+  
+    <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

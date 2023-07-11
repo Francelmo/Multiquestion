@@ -1,0 +1,64 @@
+.logo{
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    height: 500px;
+}
+
+.bodyLogin{
+    background-image: url(../img/BackgroundLogin.png);
+    background-size: cover;
+}
+
+.boxLogin{
+    box-shadow: 5px 5px 5px grey;
+}
+
+.navbar{
+    background-color: rgb(39,42,51);
+}
+.navbar-brand{
+    color: rgb(255,255,255); 
+}
+.nav-link{
+    color: rgb(147,149,153);
+}
+.nav-link:hover{
+    color: rgb(175, 178, 184);
+}
+
+.botao{
+    background-color: rgb(63,167,214);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    padding: 15%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.ladoA > img{
+    width: 500px;
+}
+.ladoB > img{
+    margin-top: 5%;
+    margin-left: 5%;
+    width: 150%;
+    border: 2px solid black;
+    box-shadow: 5px 5px 5px grey;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.dropdown-menu{
+    width: 100%;
+    position: absolute;
+    top: 87px;
+    z-index: 1000;
+    text-align: right;
+    padding: 5px 0;
+    margin: 0 auto;
+}
