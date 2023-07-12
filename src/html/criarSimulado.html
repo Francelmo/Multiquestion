@@ -10,15 +10,315 @@
     <title>Banco de Questões</title>
 </head>
 <body>
+    <!-- Acessibilidade -->
+    <div class="container-fluid fixed-top" id="acessibilidade">
+        <section class="offset-1">
+            <!-- Aumentar Fonte -->
+            <button class="btn btn-outline-light btn-floating m-1" id="aumentarFonte" title="Aumentar fonte">
+                <i class="fa-solid fa-plus fa-2xs"></i>
+                <i class="fa-solid fa-font"></i>
+            </button>
+
+            <!-- Fonte Padão -->
+            <button class="btn btn-outline-light btn-floating m-1" id="padronizarFonte" title="Padronizar fonte">
+                <i class="fa-solid fa-font"></i>
+            </button>
+
+            <!-- Diminuir Fonte -->
+            <button class="btn btn-outline-light btn-floating m-1" id="diminuirFonte" title="Diminuir fonte">
+                <i class="fa-solid fa-font"></i>
+                <i class="fa-solid fa-minus fa-2xs"></i>
+            </button>
+
+            <!-- Contraste -->
+            <button class="btn btn-outline-light btn-floating m-1 mx-3" id="altoContraste" title="Alto contraste">
+                <i class="fa-solid fa-circle-half-stroke"></i>
+            </button>
+        </section>
+    </div>
     <!-- START Corpo -->
     <div class="container pt-5">
-        <form class="d-flex" role="search">
-            <input class="form-control me-2 py-3" type="search" placeholder="Buscar por texto" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Buscar</button>
-        </form>
+        <div class="row">
+            <div class="col-3">
+                <button class="btn btn-secondary py-3 ms-4 my-5" type="submit" onclick="criar()">MODO ALEATÓRIO</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2 py-3" type="search" placeholder="Buscar palavras chaves separadas por ';'" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+            </div>
+            <div class="col-6">
+                <button class="btn btn-outline-primary me-2 py-3" id="filtroButton">Filtros</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Filtros -->
+    <div class="container my-5" id="filtroContainer" style="display: none;">
+        <div class="row">
+            <div class="col-4">
+                <h3>Filtros das Questões</h3>
+        
+                <div class="form-group mb-3">
+                    <label for="selectDificuldade">Dificuldade:</label>
+                    <div id="selectDificuldade">
+                        <button type="button" class="btn btn-outline-primary" id="btn-todas">Todas</button>
+                        <button type="button" class="btn btn-outline-success" id="btn-facil">Fácil</button>
+                        <button type="button" class="btn btn-outline-warning" id="btn-medio">Médio</button>
+                        <button type="button" class="btn btn-outline-danger" id="btn-dificil">Difícil</button>
+                    </div>
+                </div>                                         
+
+                <div class="form-group mb-3">
+                    <label for="selectQuantidade">Quantidade</label>
+                    <select class="form-select" id="selectQuantidade">
+                        <option value="">Até 5</option>
+                        <option value="5a10">5 - 10</option>
+                        <option value="10a15">10 - 15</option>
+                        <option value="15a20">15 - 20</option>
+                    </select>
+                </div>
+
+                <div class="form-check form-group mb-3">
+                    <label>Tipo:</label>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="form-check-input custom-control-input" id="checkboxVF" value="vf">
+                        <label class="custom-control-label" for="checkboxVF">Verdadeiro/Falso</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="form-check-input custom-control-input" id="checkboxDiscursiva" value="discursiva">
+                        <label class="custom-control-label" for="checkboxDiscursiva">Discursiva</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="form-check-input custom-control-input" id="checkboxMultiplaEscolha" value="multipla-escolha">
+                        <label class="custom-control-label" for="checkboxMultiplaEscolha">Múltipla Escolha</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="form-check-input custom-control-input" id="checkboxAssociacaoColunas" value="associacao-colunas">
+                        <label class="custom-control-label" for="checkboxAssociacaoColunas">Associação de Colunas</label>
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    <button class="btn btn-primary py-3 ms-4" id="btnFiltrar" onclick="criar()">CRIAR SIMULADO</button>
+                    <button class="btn btn-secondary py-3 ms-4" id="btnLimpar">LIMPAR FILTROS</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- VLibras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
     </div>
     <!-- END Corpo -->
+
+    <style>
+        body {
+            font-size: 18px;
+            background-color: #F5F5F5;
+        }
+
+        body p {
+            font-size: inherit !important;
+        }
+
+        #acessibilidade {
+            background-color: rgb(61, 139, 253);
+        }
+    </style>
+
+    <!-- Filtros -->
+    <script>
+        var btnTodas = document.getElementById("btn-todas");
+        var btnFacil = document.getElementById("btn-facil");
+        var btnMedio = document.getElementById("btn-medio");
+        var btnDificil = document.getElementById("btn-dificil");
+        var btnLimpar = document.getElementById("btnLimpar");
+
+        // Função para mostrar/ocultar os filtros
+        function toggleFiltros() {
+            var filtroContainer = document.getElementById('filtroContainer');
+            var filtroButton = document.getElementById('filtroButton');
+
+            if (filtroContainer.style.display === 'none') {
+                filtroContainer.style.display = 'block';
+                filtroButton.textContent = 'Fechar Filtros';
+            } else {
+                filtroContainer.style.display = 'none';
+                filtroButton.textContent = 'Filtros';
+            }
+        }
+        // Evento de clique no botão de filtro
+        document.getElementById('filtroButton').addEventListener('click', toggleFiltros);
+        
+        btnLimpar.addEventListener("click", function(event) {
+            document.getElementById('selectDificuldade').value = '';
+            document.getElementById('selectQuantidade').value = '';
+            document.getElementById("checkboxVF").checked = false;
+            document.getElementById("checkboxDiscursiva").checked = false;
+            document.getElementById("checkboxMultiplaEscolha").checked = false;
+            document.getElementById("checkboxAssociacaoColunas").checked = false;
+
+            if (btnTodas.classList.contains('btn-primary')) {
+                btnTodas.classList.remove('btn-primary');
+                btnTodas.classList.add('btn-outline-primary');
+            }
+            if (btnFacil.classList.contains('btn-success')) {
+                btnFacil.classList.remove('btn-success');
+                btnFacil.classList.add('btn-outline-success');
+            }
+            if (btnMedio.classList.contains('btn-warning')) {
+                btnMedio.classList.remove('btn-warning');
+                btnMedio.classList.add('btn-outline-warning');
+            }
+            if (btnDificil.classList.contains('btn-danger')) {
+                btnDificil.classList.remove('btn-danger');
+                btnDificil.classList.add('btn-outline-danger');
+            }
+        });
+        
+        btnTodas.addEventListener('click', function(event) {
+            if (btnTodas.classList.contains('btn-outline-primary')) {
+                // O botão está com a classe btn-outline-primary, então vamos alterar para btn-primary
+                btnTodas.classList.remove('btn-outline-primary');
+                btnTodas.classList.add('btn-primary');
+                // Verificar se outros botões estão com cores definidas e alterá-los
+                if (btnFacil.classList.contains('btn-success')) {
+                    btnFacil.classList.remove('btn-success');
+                    btnFacil.classList.add('btn-outline-success');
+                }
+                if (btnMedio.classList.contains('btn-warning')) {
+                    btnMedio.classList.remove('btn-warning');
+                    btnMedio.classList.add('btn-outline-warning');
+                }
+                if (btnDificil.classList.contains('btn-danger')) {
+                    btnDificil.classList.remove('btn-danger');
+                    btnDificil.classList.add('btn-outline-danger');
+                }
+            } else if (btnTodas.classList.contains('btn-primary')) {
+                // O botão está com a classe btn-primary, então vamos alterar para btn-outline-primary
+                btnTodas.classList.remove('btn-primary');
+                btnTodas.classList.add('btn-outline-primary');
+            }
+        });
+        
+        btnFacil.addEventListener('click', function(event) {
+            if (btnFacil.classList.contains('btn-outline-success')) {
+                // O botão está com a classe btn-outline-success, então vamos alterar para btn-success
+                btnFacil.classList.remove('btn-outline-success');
+                btnFacil.classList.add('btn-success');
+                if (btnTodas.classList.contains('btn-primary')) {
+                    // O botão "Todas" está com a classe btn-primary, então vamos alterar para btn-outline-primary
+                    btnTodas.classList.remove('btn-primary');
+                    btnTodas.classList.add('btn-outline-primary');
+                }
+            } else if (btnFacil.classList.contains('btn-success')) {
+                // O botão está com a classe btn-success, então vamos alterar para btn-outline-success
+                btnFacil.classList.remove('btn-success');
+                btnFacil.classList.add('btn-outline-success');
+            }
+        });
+
+        btnMedio.addEventListener('click', function(event) {
+            if (btnMedio.classList.contains('btn-outline-warning')) {
+                // O botão está com a classe btn-outline-warning, então vamos alterar para btn-warning
+                btnMedio.classList.remove('btn-outline-warning');
+                btnMedio.classList.add('btn-warning');
+                if (btnTodas.classList.contains('btn-primary')) {
+                    // O botão "Todas" está com a classe btn-primary, então vamos alterar para btn-outline-primary
+                    btnTodas.classList.remove('btn-primary');
+                    btnTodas.classList.add('btn-outline-primary');
+                }
+            } else if (btnMedio.classList.contains('btn-warning')) {
+                // O botão está com a classe btn-warning, então vamos alterar para btn-outline-warning
+                btnMedio.classList.remove('btn-warning');
+                btnMedio.classList.add('btn-outline-warning');
+            }
+        });
+        
+        btnDificil.addEventListener('click', function(event) {
+            if (btnDificil.classList.contains('btn-outline-danger')) {
+                // O botão está com a classe btn-outline-danger, então vamos alterar para btn-danger
+                btnDificil.classList.remove('btn-outline-danger');
+                btnDificil.classList.add('btn-danger');
+                if (btnTodas.classList.contains('btn-primary')) {
+                    // O botão "Todas" está com a classe btn-primary, então vamos alterar para btn-outline-primary
+                    btnTodas.classList.remove('btn-primary');
+                    btnTodas.classList.add('btn-outline-primary');
+                }
+            } else if (btnDificil.classList.contains('btn-danger')) {
+                // O botão está com a classe btn-danger, então vamos alterar para btn-outline-danger
+                btnDificil.classList.remove('btn-danger');
+                btnDificil.classList.add('btn-outline-danger');
+            }
+        });
+    </script>
+
+    <script>
+        function criar() {
+            window.location.href = "listaTarefas.html";
+        }
+
+        // Acessibilidade
+        window.onload = function() {
+            var elementBody = document.querySelector('body');
+            var elementBtnIncreaseFont = document.getElementById('aumentarFonte');
+            var elementBtnFont = document.getElementById('padronizarFonte');
+            var elementBtnDecreaseFont = document.getElementById('diminuirFonte');
+            var btnContraste = document.getElementById('altoContraste');
+            // Padrão de tamanho, equivale a 100% do valor definido no Body
+            var fontSize = 100;
+            // Valor de incremento ou decremento, equivale a 10% do valor do Body
+            var increaseDecrease = 10;
+
+            // Evento de click para aumentar a fonte
+            elementBtnIncreaseFont.addEventListener('click', function(event) {
+                fontSize = fontSize + increaseDecrease + 10;
+                elementBody.style.fontSize = fontSize + '%';
+            });
+
+            // Evento de click para padronizar a fonte
+            elementBtnFont.addEventListener('click', function (event) {
+                elementBody.style.fontSize = '113%';
+                fontSize = 100;
+                increaseDecrease = 10;
+            });
+
+            // Evento de click para diminuir a fonte
+            elementBtnDecreaseFont.addEventListener('click', function(event) {
+                fontSize = fontSize - increaseDecrease;
+                elementBody.style.fontSize = fontSize + '%';
+            });
+
+            // Evento de click para ajustar o contraste
+            btnContraste.addEventListener('click', function(event) {
+                if (elementBody.style.background === 'black' && elementBody.style.color === 'white') {
+                    // Se o contraste já estiver aplicado, reverter para o estado normal
+                    elementBody.style.background = ''; // Limpa o estilo, voltando ao valor padrão
+                    elementBody.style.color = '';
+                } else {
+                    // Aplicar o contraste
+                    elementBody.style.background = 'black';
+                    elementBody.style.color = 'white';
+                }
+            });
+        }
+    </script>
+
+    <!-- VLibras -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
     
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="../js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
